@@ -1,0 +1,62 @@
+{
+    "log_files": [],
+    "patterns": [
+        {
+            "name": "Example Pattern",
+            "regex": ".*(error|fail|exception).*",
+            "severity": "high",
+            "alert_methods": [
+                "email",
+                "console"
+            ],
+            "match_type": "any",
+            "context": null
+        }
+    ],
+    "email": {
+        "enabled": false,
+        "smtp_server": "smtp.example.com",
+        "smtp_port": 587,
+        "smtp_user": "your_email@example.com",
+        "smtp_password": "your_password",
+        "from_email": "your_email@example.com",
+        "to_email": [
+            "alert_recipient@example.com"
+        ]
+    },
+    "webhook": {
+        "enabled": false,
+        "url": "https://your-webhook-url.com",
+        "headers": {
+            "Content-type": "application/json"
+        },
+        "payload": {
+            "message": "Log monitoring alert! {{alert_message}}"
+        }
+    },
+    "push": {
+        "enabled": false,
+        "api_url": "https://push-api.com",
+        "api_key": "your_api_key",
+        "device_tokens": [
+            "token1",
+            "token2"
+        ],
+        "payload": {
+            "title": "Log monitoring alert!",
+            "body": "{{alert_message}}"
+        }
+    },
+    "severity_levels": {
+        "high": [
+            "email",
+            "console"
+        ],
+        "medium": [
+            "webhook"
+        ],
+        "low": [
+            "push"
+        ]
+    }
+}
