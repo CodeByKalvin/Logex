@@ -18,7 +18,6 @@ from abc import ABC, abstractmethod
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# ASCII Art
 print("""
   _____   ___  ___
  / ___/  / _ \/ __|
