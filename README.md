@@ -48,8 +48,8 @@ To use Logex locally, follow these steps:
 #### 1. Clone the Repository
 
 ```bash
-git clone [repository_url]
-cd [repository_directory]
+git clone https://github.com/CodeByKalvin/Logex.git
+cd Logex
 ```
 
 #### 2. Install Dependencies
